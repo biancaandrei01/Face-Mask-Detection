@@ -38,5 +38,4 @@ def draw_yolo_labels(image_path, labels_path, output_path=None):
 
 
 # Example usage
-draw_yolo_labels('code\\???\\images\\val\\???.JPEG', 'code\\???\\labels\\val\\???.txt',
-                 'code\\???.jpg')
+draw_yolo_labels('', '') # add your image and label path

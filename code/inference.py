@@ -3,9 +3,9 @@ import os
 
 if __name__ == "__main__":
     # Load a model
-    model = YOLO("checkpoints\\??\\weights\\best.pt")
+    model = YOLO("C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\checkpoints\\test\\weights\\best.pt")
     # Define the path to the test images folder
-    test_images_folder = "images\\test"
+    test_images_folder = "C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\mask-dataset\\images\\test"
 
     # Get all image file paths in the test set folder (supports .jpg, .jpeg, .png)
     supported_formats = ('.jpg', '.jpeg', '.png')
@@ -22,7 +22,7 @@ if __name__ == "__main__":
             # result.show()  # Display result on the screen (optional)
             # Save the result to disk (optional)
             output_filename = os.path.join(
-                "inference\\???",
+                "C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\inference\\test",
                 os.path.basename(image_path))
             result.save(filename=output_filename)
 

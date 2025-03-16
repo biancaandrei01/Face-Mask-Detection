@@ -46,7 +46,7 @@ def process_images(input_folder, output_folder):
 
 
 # Example usage:
-input_folder = 'input'  # Path to the folder containing original images
-output_folder = 'output'  # Path to the folder where resized images will be saved
+input_folder = ''  # Add your path to the folder containing original images
+output_folder = ''  # Add your path to the folder where resized images will be saved
 
 process_images(input_folder, output_folder)

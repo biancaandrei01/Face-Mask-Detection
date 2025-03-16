@@ -29,7 +29,7 @@ if __name__ == "__main__":
         save=True,  # Save checkpoints after each epoch
         device=device,
         # Directory where the model checkpoints will be saved
-        project="checkpoints",
+        project="C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\checkpoints",
         name="test",  # Name of the training run folder
         optimizer='Adam',  # Optional: you can specify optimizer
         workers=2,  # Number of data loading workers
