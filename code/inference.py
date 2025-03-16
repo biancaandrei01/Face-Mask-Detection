@@ -3,7 +3,7 @@ import os
 
 if __name__ == "__main__":
     # Load a model
-    model = YOLO("checkpoints\\???\\weights\\best.pt")
+    model = YOLO("checkpoints\\??\\weights\\best.pt")
     # Define the path to the test images folder
     test_images_folder = "images\\test"
 
