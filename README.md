@@ -9,4 +9,4 @@ This repository documents a quick experiment to train a **YOLOv8** model on a pu
 -   **Model**: YOLOv8
 -   **Dataset**: Face Mask Detection on Kaggle
 -   **Classes**: `mask`, `no_mask`
--   **Experiment Tracking**: All training runs are logged and visualized on **[Weights & Biases](https://wandb.ai/transformers_3/Face%20Mask%20Detection?nw=nwuserbiancaandrei)**
+-   **Experiment Tracking**: All training runs are logged and visualized on **[Weights & Biases](https://wandb.ai/transformers_3/Face%20Mask%20Detection)**
