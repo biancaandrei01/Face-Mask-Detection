@@ -1,11 +1,14 @@
 from ultralytics import YOLO
-import os
+import os.path
+from utils import load_config
 
-if __name__ == "__main__":
+def inference():
+    config = load_config.load_config()
+
     # Load a model
-    model = YOLO("C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\checkpoints\\test\\weights\\best.pt")
+    model = YOLO(os.path.join(config["checkpoints"], config["wandb"]["name"], "weights", "best.pt"))
     # Define the path to the test images folder
-    test_images_folder = "C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\mask-dataset\\images\\test"
+    test_images_folder = os.path.join(config["checkpoints"], "images", "test")
 
     # Get all image file paths in the test set folder (supports .jpg, .jpeg, .png)
     supported_formats = ('.jpg', '.jpeg', '.png')
@@ -21,9 +24,10 @@ if __name__ == "__main__":
         for result in results:
             # result.show()  # Display result on the screen (optional)
             # Save the result to disk (optional)
-            output_filename = os.path.join(
-                "C:\\Users\\Bianca\\PycharmProjects\\ACABI\\Face_Mask_Detection\\inference\\test",
-                os.path.basename(image_path))
+            output_filename = os.path.join(config["inference"], config["wandb"]["name"], os.path.basename(image_path))
             result.save(filename=output_filename)
 
         print(f"Inference done for {image_path}")
+
+if __name__ == "__main__":
+    inference()
